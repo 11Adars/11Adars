@@ -1,0 +1,37 @@
+let display = document.getElementById('display');
+let currentInput = '';
+let operator = '';
+
+
+
+function appendValue(value) {
+    currentInput += value;
+    updateDisplay();
+}
+
+function setOperator(op) {
+    operator = op;
+    currentInput += ' ' + op + ' ';
+    updateDisplay();
+}
+
+
+function clearDisplay() {
+    currentInput = '';
+    operator = '';
+    updateDisplay();
+}
+
+function calculateResult() {
+    try {
+        currentInput = eval(currentInput).toString();
+        updateDisplay();
+    } catch (error) {
+        display.innerText = 'Error';
+    }
+}
+
+
+function updateDisplay() {
+    display.innerText = currentInput;
+}
