@@ -5,51 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
     <link rel="stylesheet" href="styles2.css">
- <style>body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
     
-}
-
-#calculator {
-    width: 300px;
-    border: 1px solid #3617be;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(232, 19, 19, 0.1);
-    background-image:
-}
-
-#display {
-    margin-bottom: 10px;
-    padding: 8px;
-    font-size: 18px;
-    text-align: right;
-    border: 1px solid #e96c6c;
-    border-radius: 4px;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: aliceblue;
-    
-}
-
-button {
-    background-color: rgb(22, 184, 84);
-    width: 70px;
-    height: 40px;
-    margin: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    color: rgb(22, 23, 23);
-}
-button:hover{
-    
-    ckground-color: #e96c6c;
-}</style>   
 </head>
 <body>
     <div id="calculator">
@@ -74,42 +30,5 @@ button:hover{
         <button onclick="clearDisplay('.')" style="background-color: rgb(228, 147, 18);">.</button>
         <script src="script2.js"></script>
     </div>
-    <script>       let display = document.getElementById('display');
-let currentInput = '';
-let operator = '';
-
-
-
-function appendValue(value) {
-    currentInput += value;
-    updateDisplay();
-}
-
-function setOperator(op) {
-    operator = op;
-    currentInput += ' ' + op + ' ';
-    updateDisplay();
-}
-
-
-function clearDisplay() {
-    currentInput = '';
-    operator = '';
-    updateDisplay();
-}
-
-function calculateResult() {
-    try {
-        currentInput = eval(currentInput).toString();
-        updateDisplay();
-    } catch (error) {
-        display.innerText = 'Error';
-    }
-}
-
-
-function updateDisplay() {
-    display.innerText = currentInput;
-} </script>
 </body>
 </html>
